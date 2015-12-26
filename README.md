@@ -1,2 +1,4 @@
 # CS-490
-Tipster App as pre-work
+Pre-Work: CS-490
+
+Tipster App
