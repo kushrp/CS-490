@@ -41,17 +41,6 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" id="4oG-tG-3Q1">
-                                <rect key="frame" x="186" y="124" width="109" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
-                                <connections>
-                                    <action selector="onChange:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="3wm-Sl-k6S"/>
-                                    <action selector="onChange:" destination="BYZ-38-t0r" eventType="editingChanged" id="MTh-Qm-b5q"/>
-                                    <action selector="onChange:forEvent:" destination="BYZ-38-t0r" eventType="editingChanged" id="rLr-j3-ibk"/>
-                                </connections>
-                            </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="QTU-dK-Xsx">
                                 <rect key="frame" x="27" y="336" width="54" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -68,11 +57,20 @@
                                     <segment title="25%"/>
                                 </segments>
                             </segmentedControl>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" id="sJY-Ch-5op">
+                                <rect key="frame" x="198" y="124" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                <connections>
+                                    <action selector="onEditingChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="mXY-uc-A7U"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="amountTextField" destination="4oG-tG-3Q1" id="Gq0-sN-OOO"/>
+                        <outlet property="billField" destination="sJY-Ch-5op" id="LcP-DO-hP0"/>
                         <outlet property="tipControl" destination="haS-zz-3SD" id="Xtd-dD-SEP"/>
                         <outlet property="tipValueLabel" destination="yJa-3K-wO6" id="FK4-QN-qCY"/>
                         <outlet property="totalAmountLabel" destination="9tU-BA-1w7" id="kA7-30-HSX"/>

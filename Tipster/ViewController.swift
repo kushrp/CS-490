@@ -10,10 +10,10 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var amountTextField: UITextField!
     @IBOutlet weak var tipControl: UISegmentedControl!
     @IBOutlet weak var tipValueLabel: UILabel!
     @IBOutlet weak var totalAmountLabel: UILabel!
+    @IBOutlet weak var billField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,14 +27,14 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func onChange(sender: AnyObject) {
+    @IBAction func onEditingChanged(sender: AnyObject) {
         var tipArray = [0.15,0.2,0.25]
         let tipPercentage = tipArray[tipControl.selectedSegmentIndex]
         var billAmount: Double
         var tipAmount: Double
         var totalAmount: Double
-        if amountTextField.text?.isEmpty == false {
-            billAmount = Double(amountTextField.text!)!
+        if billField.text?.isEmpty == false {
+            billAmount = Double(billField.text!)!
             tipAmount = billAmount * tipPercentage;
             totalAmount = billAmount + tipAmount;
         }
@@ -46,5 +46,10 @@ class ViewController: UIViewController {
         tipValueLabel.text = "$\(tipAmount)"
         totalAmountLabel.text = "$\(totalAmount)"
     }
+    /*@IBAction func onChange(sender: AnyObject) {
+    
+    }
+    */
+    
 }
 
