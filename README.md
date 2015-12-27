@@ -1,8 +1,8 @@
 # CS-490 Pre-Work
 
-Tipster iOS App
+Tipstr iOS App
 
-Tipster is a tip calculator application.
+Tipstr is a tip calculator application.
 
 Submitted by: Kush Rustagi
 
