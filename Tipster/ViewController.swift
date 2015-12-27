@@ -31,20 +31,21 @@ class ViewController: UIViewController {
         var tipArray = [0.15,0.2,0.25]
         let tipPercentage = tipArray[tipControl.selectedSegmentIndex]
         var billAmount: Double
-        var tipAmount: Double
-        var totalAmount: Double
+        var tipAmount: String
+        var totalAmount: String
         if billField.text?.isEmpty == false {
             billAmount = Double(billField.text!)!
-            tipAmount = billAmount * tipPercentage;
-            totalAmount = billAmount + tipAmount;
+            tipAmount = String(format: "$%.2f", arguments: [billAmount * tipPercentage])
+            //tipAmount = billAmount * tipPercentage;
+            totalAmount = String(format: "$%.2f", arguments: [billAmount + (billAmount * tipPercentage)]);
         }
         else {
             billAmount = 0.00;
-            tipAmount = 0.00;
-            totalAmount = 0.00;
+            tipAmount = "0.00";
+            totalAmount = "0.00";
         }
-        tipValueLabel.text = "$\(tipAmount)"
-        totalAmountLabel.text = "$\(totalAmount)"
+        tipValueLabel.text = "\(tipAmount)"
+        totalAmountLabel.text = "\(totalAmount)"
     }
     /*@IBAction func onChange(sender: AnyObject) {
     
