@@ -11,6 +11,8 @@ Submitted by: Kush Rustagi
 The following **required** functionality is complete:
 
 * [ ] User can enter a bill amount, choose a tip percentage, and see the tip and total values.
+  *[X] Base UI, text field and tip,total value places
+  *[ ] Update the tip and total values as value changes
 * [ ] Using a segmented control for entering tip values.
 * [ ] Settings page to change the default tip percentage.
 
