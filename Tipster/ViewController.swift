@@ -14,6 +14,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var tipValueLabel: UILabel!
     @IBOutlet weak var totalAmountLabel: UILabel!
     @IBOutlet weak var billField: UITextField!
+    @IBOutlet var onTap: UITapGestureRecognizer!
+    @IBOutlet weak var navBar: UINavigationBar!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,11 +43,14 @@ class ViewController: UIViewController {
         }
         else {
             billAmount = 0.00;
-            tipAmount = "0.00";
-            totalAmount = "0.00";
+            tipAmount = "$0.00";
+            totalAmount = "$0.00";
         }
         tipValueLabel.text = "\(tipAmount)"
         totalAmountLabel.text = "\(totalAmount)"
+    }
+    @IBAction func onDismiss(sender: AnyObject) {
+        view.endEditing(true)
     }
     /*@IBAction func onChange(sender: AnyObject) {
     
